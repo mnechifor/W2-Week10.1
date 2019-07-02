@@ -15,6 +15,11 @@ namespace UnitTests
 
         public string ReverseStringWithFor(string value)
         {
+            if (value == null)
+            {
+                throw new ArgumentNullException();
+            }
+
             StringBuilder s = new StringBuilder();
 
             for (int i = value.Length - 1; i >= 0; i--)
